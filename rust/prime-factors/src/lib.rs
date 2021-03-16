@@ -4,7 +4,7 @@ pub fn factors(n: u64) -> Vec<u64> {
     let mut vec = Vec::new();
     let mut number = n;
 
-    loop {
+    while number != 1 {
         let lower_prime = lower_prime(number);
 
         match lower_prime {
@@ -13,9 +13,7 @@ pub fn factors(n: u64) -> Vec<u64> {
                 number = number / x;
             }
             None => {
-                if number != 1 {
-                    vec.push(number);
-                }
+                vec.push(number);
                 break;
             }
         }
