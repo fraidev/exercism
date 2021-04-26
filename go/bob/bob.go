@@ -16,7 +16,6 @@ func Hey(remark string) string {
 	// Then remove all the stock comments.
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
-
 	sentence := strings.TrimSpace(remark);
 
 	if len(sentence) == 0 {
